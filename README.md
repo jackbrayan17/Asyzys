@@ -35,7 +35,7 @@ Asyzys est un hub immersif qui rapproche les développeurs et leurs communautés
 
 ## Personnalisation
 
-Les données initiales (catégories, développeurs, applications, croquis, avis) sont définies dans `assets/js/db.js`. Vous pouvez enrichir ou adapter ces entrées pour refléter vos propres projets.
+Les données initiales (catégories, développeurs, applications, croquis, avis) sont définies dans `public/js/db.js`. Vous pouvez enrichir ou adapter ces entrées pour refléter vos propres projets.
 
 ---
 © Asyzys.com — Propulsez vos expériences digitales avec style.

@@ -10,11 +10,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="public/css/style.css">
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/sql-wasm.js"></script>
-  <script defer src="assets/js/db.js"></script>
-  <script defer src="assets/js/main.js"></script>
-  <script defer src="assets/js/pages/apps.js"></script>
+  <script defer src="public/js/db.js"></script>
+  <script defer src="public/js/main.js"></script>
+  <script defer src="public/js/pages/apps.js"></script>
 </head>
 <body>
   <header class="site-header" data-navigation>
@@ -31,7 +31,8 @@
           <a href="terms.html">Conditions</a>
         </div>
         <div class="navbar__actions">
-          <div class="navbar__auth" data-auth-target></div>
+          <a class="btn btn--ghost" href="auth.html"><i class="fa-solid fa-user"></i> Se connecter</a>
+          <a class="btn btn--primary" href="auth.html"><i class="fa-solid fa-user-plus"></i> S'inscrire</a>
         </div>
         <button class="mobile-toggle" data-mobile-toggle>
           <i class="fa-solid fa-bars"></i>
@@ -50,73 +51,6 @@
         <select data-category-filter></select>
         <input type="search" placeholder="Rechercher une application..." data-search-apps>
       </div>
-      <section class="add-app-card" data-add-app-section hidden id="publier">
-        <div class="add-app-card__header">
-          <h2>Publier une nouvelle application</h2>
-          <p>Connectez-vous avec votre studio Asyzys pour ajouter des croquis UI, prix, versions et CTA immersifs.</p>
-        </div>
-        <form data-add-app-form>
-          <div class="form-grid">
-            <div class="form-group">
-              <label for="add_app_title">Nom de l'application</label>
-              <input id="add_app_title" name="title" required>
-            </div>
-            <div class="form-group">
-              <label for="add_app_tagline">Tagline</label>
-              <input id="add_app_tagline" name="tagline" required>
-            </div>
-            <div class="form-group form-group--full">
-              <label for="add_app_description">Description</label>
-              <textarea id="add_app_description" name="description" rows="4" required></textarea>
-            </div>
-            <div class="form-group">
-              <label for="add_app_version">Version</label>
-              <input id="add_app_version" name="version" required>
-            </div>
-            <div class="form-group">
-              <label for="add_app_published">Date de publication</label>
-              <input id="add_app_published" type="date" name="published_at" required>
-            </div>
-            <div class="form-group">
-              <label for="add_app_updated">Dernière mise à jour</label>
-              <input id="add_app_updated" type="date" name="updated_at" required>
-            </div>
-            <div class="form-group">
-              <label for="add_app_hero">Image hero (URL)</label>
-              <input id="add_app_hero" type="url" name="hero_image" placeholder="https://" required>
-            </div>
-            <div class="form-group">
-              <label>Catégories</label>
-              <div class="checkboxes" data-add-category-checkboxes></div>
-            </div>
-            <div class="form-group">
-              <label>Modèle économique</label>
-              <select name="pricing" required>
-                <option value="free">Gratuit</option>
-                <option value="premium">Payant</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="add_app_price">Prix (si payant)</label>
-              <input id="add_app_price" type="number" step="0.01" min="0" name="price" placeholder="4.99">
-            </div>
-            <div class="form-group form-group--full">
-              <label for="add_app_demo">Lien de démonstration / téléchargement</label>
-              <input id="add_app_demo" type="url" name="demo_url" placeholder="https://" required>
-            </div>
-          </div>
-          <div class="form-group" data-add-assets>
-            <label>Croquis UI & captures</label>
-            <p class="muted">Ajoutez au moins un visuel haute résolution présentant vos animations et transitions.</p>
-            <div class="form-group">
-              <label for="add_asset_0">URL du croquis 1</label>
-              <input id="add_asset_0" type="url" name="asset_0" placeholder="https://" required>
-            </div>
-          </div>
-          <button class="btn btn--ghost" type="button" data-add-app-asset><i class="fa-solid fa-plus"></i> Ajouter un croquis</button>
-          <button class="btn btn--primary" type="submit">Publier l'application</button>
-        </form>
-      </section>
       <div class="app-list" data-app-list></div>
     </div>
   </main>
