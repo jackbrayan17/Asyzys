@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asyzys · Carrefour des applications visionnaires</title>
+  <meta name="description" content="Asyzys connecte développeurs et utilisateurs autour d'applications immersives : téléchargez, notez, commentez et explorez des croquis UI inspirants.">
+  <meta property="og:title" content="Asyzys · Carrefour des applications visionnaires">
+  <meta property="og:description" content="Découvrez des apps créatives, leurs développeurs et des croquis UI exclusifs. Rejoignez la communauté Asyzys !">
+  <meta property="og:image" content="https://asyzys.com/images/logo.png">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDnZ9E9QnUnxE27XGr0CcsMEY0S8NxV+4CSkiUbSSjMBDRNIQP5CKV5M9s3G8w+Kp1Vn0O7pKAQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/sql-wasm.js"></script>
+  <script defer src="assets/js/db.js"></script>
+  <script defer src="assets/js/main.js"></script>
+  <script defer src="assets/js/pages/home.js"></script>
+</head>
+<body>
+  <header class="site-header" data-navigation>
+    <div class="container">
+      <nav class="navbar">
+        <a class="navbar__logo" href="index.html">
+          <img src="images/logo.png" alt="Logo Asyzys">
+          <span>Asyzys</span>
+        </a>
+        <div class="navbar__links">
+          <a href="index.html">Accueil</a>
+          <a href="apps.html">Applications</a>
+          <a href="about.html">À propos</a>
+          <a href="terms.html">Conditions</a>
+        </div>
+        <div class="navbar__actions">
+          <a class="btn btn--ghost" href="apps.html"><i class="fa-solid fa-magnifying-glass"></i> Explorer</a>
+          <a class="btn btn--primary" href="auth.html"><i class="fa-solid fa-user-plus"></i> Rejoindre</a>
+        </div>
+        <button class="mobile-toggle" data-mobile-toggle>
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <header class="section-heading" data-animate>
+          <p class="eyebrow">Carrefour des développeurs visionnaires</p>
+          <h1>Publiez, partagez et propulsez vos expériences digitales</h1>
+          <p>Asyzys est la vitrine premium des apps africaines et internationales : croquis UI, simulations de paiement, notes, commentaires et abonnements en un seul hub.</p>
+        </header>
+        <div class="hero__grid" data-hero-apps></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading" data-animate>
+          <h2>Catégories vibrantes</h2>
+          <p>Éducation, jeux, musique, productivité... choisissez votre univers.</p>
+        </div>
+        <div class="category-grid" data-category-grid></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading" data-animate>
+          <h2>Découvertes en vedette</h2>
+          <p>Des expériences immersives avec animations, transitions et CTA engageants.</p>
+          <div class="filters">
+            <input type="search" placeholder="Rechercher une application..." data-search-apps>
+          </div>
+        </div>
+        <div class="app-grid" data-discover-list></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="stats-band" data-animate>
+          <div class="stat-card">
+            <h3 data-counter="158000">0</h3>
+            <p>Téléchargements générés</p>
+          </div>
+          <div class="stat-card">
+            <h3 data-counter="420">0</h3>
+            <p>Développeurs créatifs</p>
+          </div>
+          <div class="stat-card">
+            <h3 data-counter="2600">0</h3>
+            <p>Sketches UI partagés</p>
+          </div>
+          <div class="stat-card">
+            <h3 data-counter="9800">0</h3>
+            <p>Abonnements utilisateurs</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading" data-animate>
+          <h2>Pourquoi choisir Asyzys ?</h2>
+          <p>Nous mettons en avant l'innovation, la transparence et des interactions humaines riches.</p>
+        </div>
+        <div class="category-grid" data-animate>
+          <article class="category-card">
+            <span class="category-card__icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+            <h3>Animations fluides</h3>
+            <p>Transitions, micro-interactions et transformations immersives inspirées des meilleurs studios.</p>
+          </article>
+          <article class="category-card">
+            <span class="category-card__icon"><i class="fa-solid fa-comments"></i></span>
+            <h3>Communauté active</h3>
+            <p>Notes, avis, likes et abonnements instantanés pour comprendre les besoins utilisateurs.</p>
+          </article>
+          <article class="category-card">
+            <span class="category-card__icon"><i class="fa-solid fa-share-nodes"></i></span>
+            <h3>Partage en un clic</h3>
+            <p>Copiez ou partagez les profils développeurs et fiches apps via nos CTA dédiés.</p>
+          </article>
+          <article class="category-card">
+            <span class="category-card__icon"><i class="fa-solid fa-lock"></i></span>
+            <h3>Respect & confiance</h3>
+            <p>Inscription sécurisée, conditions d'utilisation claires et simulations de paiement sans risque.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="images/logo.png" alt="Asyzys" width="60">
+          <p>Asyzys.com est le carrefour des développeurs et de leurs communautés. Publiez vos apps, vos croquis UI et développez votre audience.</p>
+        </div>
+        <div>
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="apps.html">Applications</a></li>
+            <li><a href="auth.html">Connexion & inscription</a></li>
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="terms.html">Conditions d'utilisation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Ressources</h4>
+          <ul>
+            <li><a href="apps.html?category=education">Éducation</a></li>
+            <li><a href="apps.html?category=jeux">Jeux</a></li>
+            <li><a href="apps.html?category=musique">Musique</a></li>
+            <li><a href="apps.html?category=productivite">Productivité</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Restez connectés</h4>
+          <p>Suivez nos annonces, UI kits et stories sur nos réseaux.</p>
+          <div class="navbar__actions">
+            <a class="btn btn--icon" href="https://www.facebook.com" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+            <a class="btn btn--icon" href="https://www.linkedin.com" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a class="btn btn--icon" href="https://www.youtube.com" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-current-year></span> Asyzys.com · Toutes les innovations pour les développeurs.</span>
+        <span>Made with passion entre Douala, Dakar et Paris.</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

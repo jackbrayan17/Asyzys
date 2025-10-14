@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connexion & inscription · Asyzys</title>
+  <meta name="description" content="Inscrivez-vous sur Asyzys en tant que développeur ou utilisateur, acceptez nos conditions et lancez vos applications.">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/sql-wasm.js"></script>
+  <script defer src="assets/js/db.js"></script>
+  <script defer src="assets/js/main.js"></script>
+  <script defer src="assets/js/pages/auth.js"></script>
+</head>
+<body>
+  <header class="site-header" data-navigation>
+    <div class="container">
+      <nav class="navbar">
+        <a class="navbar__logo" href="index.html">
+          <img src="images/logo.png" alt="Logo Asyzys">
+          <span>Asyzys</span>
+        </a>
+        <div class="navbar__links">
+          <a href="index.html">Accueil</a>
+          <a href="apps.html">Applications</a>
+          <a href="about.html">À propos</a>
+          <a href="terms.html">Conditions</a>
+        </div>
+        <div class="navbar__actions">
+          <a class="btn btn--ghost" href="auth.html"><i class="fa-solid fa-user"></i> Se connecter</a>
+          <a class="btn btn--primary" href="auth.html"><i class="fa-solid fa-user-plus"></i> Créer un compte</a>
+        </div>
+        <button class="mobile-toggle" data-mobile-toggle>
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="auth-page">
+    <div class="container">
+      <header class="section-heading" data-animate>
+        <h1>Rejoindre Asyzys</h1>
+        <p>Développeurs et utilisateurs se connectent depuis la même page. Choisissez votre espace.</p>
+      </header>
+      <div class="auth-tabs">
+        <button data-auth-tab="login">Utilisateur</button>
+        <button data-auth-tab="developer">Développeur</button>
+      </div>
+      <div class="auth-panels">
+        <section class="auth-panel" data-auth-panel="login">
+          <h2>Créer un compte utilisateur</h2>
+          <p>Accédez aux likes, commentaires, abonnements et téléchargements.</p>
+          <form data-user-form>
+            <div class="form-group">
+              <label for="user_full_name">Nom complet</label>
+              <input id="user_full_name" name="full_name" required>
+            </div>
+            <div class="form-group">
+              <label for="user_phone">Numéro de téléphone</label>
+              <input id="user_phone" name="phone" required>
+            </div>
+            <div class="form-group">
+              <label for="user_email">Email</label>
+              <input id="user_email" type="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="user_password">Mot de passe</label>
+              <input id="user_password" type="password" name="password" required minlength="8">
+            </div>
+            <div class="form-group">
+              <label for="user_password_confirm">Confirmer le mot de passe</label>
+              <input id="user_password_confirm" type="password" name="password_confirm" required minlength="8">
+            </div>
+            <label class="terms-check">
+              <input type="checkbox" name="terms" required>
+              <span>J'accepte les <a href="terms.html" target="_blank" rel="noopener">conditions d'utilisation</a> Asyzys.</span>
+            </label>
+            <p class="muted">Besoin d'aide ? Contactez-nous au <strong>+237694103585</strong>.</p>
+            <button class="btn btn--primary" type="submit">Créer mon espace</button>
+          </form>
+        </section>
+
+        <section class="auth-panel" data-auth-panel="developer">
+          <h2>Studio développeur</h2>
+          <p>Publiez votre application, ajoutez des croquis UI, fixez vos tarifs et animez votre communauté.</p>
+          <form data-developer-form>
+            <div class="form-group">
+              <label for="dev_full_name">Nom complet</label>
+              <input id="dev_full_name" name="full_name" required>
+            </div>
+            <div class="form-group">
+              <label for="dev_phone">Numéro de téléphone</label>
+              <input id="dev_phone" name="phone" required>
+            </div>
+            <div class="form-group">
+              <label for="dev_country">Pays</label>
+              <select id="dev_country" name="country_id" required></select>
+            </div>
+            <div class="form-group">
+              <label for="dev_portfolio">Lien portfolio</label>
+              <input id="dev_portfolio" name="portfolio_url" type="url" placeholder="https://" required>
+            </div>
+            <div class="form-group">
+              <label for="dev_github">Lien GitHub</label>
+              <input id="dev_github" name="github_url" type="url" placeholder="https://github.com/" required>
+            </div>
+            <div class="form-group">
+              <label for="dev_bio">Bio</label>
+              <textarea id="dev_bio" name="bio" rows="3" placeholder="Parlez de votre vision, de vos techs..." required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="dev_avatar">Avatar (URL)</label>
+              <input id="dev_avatar" name="avatar_url" type="url" placeholder="https://">
+            </div>
+
+            <h3>Votre application phare</h3>
+            <div class="form-group">
+              <label for="app_title">Nom de l'application</label>
+              <input id="app_title" name="app_title" required>
+            </div>
+            <div class="form-group">
+              <label for="app_tagline">Tagline</label>
+              <input id="app_tagline" name="app_tagline" required>
+            </div>
+            <div class="form-group">
+              <label for="app_description">Description</label>
+              <textarea id="app_description" name="app_description" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="app_version">Version</label>
+              <input id="app_version" name="app_version" required>
+            </div>
+            <div class="form-group">
+              <label for="app_published_at">Date de publication</label>
+              <input id="app_published_at" type="date" name="app_published_at" required>
+            </div>
+            <div class="form-group">
+              <label for="app_updated_at">Dernière mise à jour</label>
+              <input id="app_updated_at" type="date" name="app_updated_at" required>
+            </div>
+            <div class="form-group">
+              <label for="app_hero_image">Image hero (URL)</label>
+              <input id="app_hero_image" name="app_hero_image" type="url" placeholder="https://" required>
+            </div>
+            <div class="form-group">
+              <label>Catégories (1 à 3)</label>
+              <div class="checkboxes" data-category-checkboxes></div>
+            </div>
+            <div class="form-group">
+              <label>Modèle économique</label>
+              <select name="app_pricing" required>
+                <option value="free">Gratuit</option>
+                <option value="premium">Payant</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="app_price">Prix (si payant)</label>
+              <input id="app_price" name="app_price" type="number" step="0.01" min="0" placeholder="9.99">
+            </div>
+            <div class="form-group">
+              <label for="app_demo_url">Lien de démonstration / téléchargement</label>
+              <input id="app_demo_url" name="app_demo_url" type="url" placeholder="https://" required>
+            </div>
+            <div class="form-group" data-sketches>
+              <label>Sketches UI</label>
+              <p class="muted">Ajoutez vos croquis d'interface (minimum 1, ajoutez-en plusieurs pour vos animations).</p>
+              <div class="form-group">
+                <label for="sketch_0">URL du croquis UI 1</label>
+                <input id="sketch_0" name="sketch_0" type="url" placeholder="https://" required>
+              </div>
+            </div>
+            <button class="btn btn--ghost" data-add-sketch><i class="fa-solid fa-plus"></i> Ajouter un croquis</button>
+
+            <div class="form-group">
+              <label for="dev_password">Mot de passe</label>
+              <input id="dev_password" type="password" name="password" required minlength="8">
+            </div>
+            <div class="form-group">
+              <label for="dev_password_confirm">Confirmer le mot de passe</label>
+              <input id="dev_password_confirm" type="password" name="password_confirm" required minlength="8">
+            </div>
+            <label class="terms-check">
+              <input type="checkbox" name="terms" required>
+              <span>J'accepte les <a href="terms.html" target="_blank" rel="noopener">conditions d'utilisation</a> Asyzys.</span>
+            </label>
+            <p class="muted">Assistance onboarding : <strong>+237694103585</strong>.</p>
+            <button class="btn btn--primary" type="submit">Publier mon studio</button>
+          </form>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="images/logo.png" alt="Asyzys" width="60">
+          <p>Unifiez vos interactions : un seul compte pour les développeurs et utilisateurs.</p>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <ul>
+            <li><a href="terms.html">Conditions d'utilisation</a></li>
+            <li><a href="about.html">À propos & contact</a></li>
+            <li>Tel : +237694103585</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Studio</h4>
+          <ul>
+            <li>Publiez vos prototypes UI</li>
+            <li>Activez les likes et notes</li>
+            <li>Simulez vos revenus</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Partage</h4>
+          <button class="btn btn--ghost" data-copy-link>
+            <i class="fa-solid fa-copy"></i> Copier cette page
+          </button>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-current-year></span> Asyzys.com</span>
+        <span>Un seul hub pour toutes vos apps.</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

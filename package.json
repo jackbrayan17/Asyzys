@@ -1,0 +1,17 @@
+{
+  "name": "asyzys",
+  "version": "1.0.0",
+  "description": "Hub web Asyzys – catalogue d'applications, profils développeurs et inscription unifiée.",
+  "scripts": {
+    "start": "python -m http.server 8080"
+  },
+  "keywords": [
+    "asyzys",
+    "marketplace",
+    "applications",
+    "sqlite",
+    "sql.js"
+  ],
+  "author": "",
+  "license": "MIT"
+}
