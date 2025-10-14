@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil développeur · Asyzys</title>
+  <meta name="description" content="Consultez le profil d'un développeur Asyzys, abonnez-vous, explorez ses applications et partagez ses croquis UI.">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="public/css/style.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/sql-wasm.js"></script>
+  <script defer src="public/js/db.js"></script>
+  <script defer src="public/js/main.js"></script>
+  <script defer src="public/js/pages/developer.js"></script>
+</head>
+<body>
+  <header class="site-header" data-navigation>
+    <div class="container">
+      <nav class="navbar">
+        <a class="navbar__logo" href="index.html">
+          <img src="images/logo.png" alt="Logo Asyzys">
+          <span>Asyzys</span>
+        </a>
+        <div class="navbar__links">
+          <a href="index.html">Accueil</a>
+          <a href="apps.html">Applications</a>
+          <a href="about.html">À propos</a>
+          <a href="terms.html">Conditions</a>
+        </div>
+        <div class="navbar__actions">
+          <a class="btn btn--ghost" href="apps.html"><i class="fa-solid fa-arrow-left"></i> Retour apps</a>
+          <a class="btn btn--primary" href="auth.html"><i class="fa-solid fa-user-plus"></i> S'inscrire</a>
+        </div>
+        <button class="mobile-toggle" data-mobile-toggle>
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container" data-developer-profile>
+      <p class="empty-state">Chargement du profil...</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="images/logo.png" alt="Asyzys" width="60">
+          <p>Les studios Asyzys partagent leurs inspirations, leurs UI kits et leurs roadmaps produits.</p>
+        </div>
+        <div>
+          <h4>Raccourcis</h4>
+          <ul>
+            <li><a href="auth.html">Rejoindre comme développeur</a></li>
+            <li><a href="auth.html">Créer un compte utilisateur</a></li>
+            <li><a href="terms.html">Conditions d'utilisation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Partage rapide</h4>
+          <button class="btn btn--ghost" data-copy-link>
+            <i class="fa-solid fa-copy"></i> Copier le profil
+          </button>
+        </div>
+        <div>
+          <h4>Communauté</h4>
+          <p>Rejoignez notre newsletter pour recevoir nos UI kits mensuels.</p>
+          <a class="btn btn--primary" href="auth.html">Je m'inscris</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-current-year></span> Asyzys.com</span>
+        <span>Partagez la créativité.</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
