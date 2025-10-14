@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À propos · Asyzys</title>
+  <meta name="description" content="Découvrez la mission d'Asyzys, notre ADN créatif et contactez-nous pour vos projets.">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/sql-wasm.js"></script>
+  <script defer src="assets/js/db.js"></script>
+  <script defer src="assets/js/main.js"></script>
+</head>
+<body>
+  <header class="site-header" data-navigation>
+    <div class="container">
+      <nav class="navbar">
+        <a class="navbar__logo" href="index.html">
+          <img src="images/logo.png" alt="Logo Asyzys">
+          <span>Asyzys</span>
+        </a>
+        <div class="navbar__links">
+          <a href="index.html">Accueil</a>
+          <a href="apps.html">Applications</a>
+          <a href="about.html">À propos</a>
+          <a href="terms.html">Conditions</a>
+        </div>
+        <div class="navbar__actions">
+          <div class="navbar__auth" data-auth-target></div>
+        </div>
+        <button class="mobile-toggle" data-mobile-toggle>
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <section class="section-heading" data-animate>
+        <h1>À propos d'Asyzys</h1>
+        <p>Nous sommes le hub qui connecte les développeurs visionnaires à leurs utilisateurs fidèles.</p>
+      </section>
+      <section class="category-grid" data-animate>
+        <article class="category-card">
+          <span class="category-card__icon"><i class="fa-solid fa-globe"></i></span>
+          <h3>Mission</h3>
+          <p>Offrir une vitrine premium aux studios africains et internationaux en quête de visibilité et de feedbacks qualitatifs.</p>
+        </article>
+        <article class="category-card">
+          <span class="category-card__icon"><i class="fa-solid fa-rocket"></i></span>
+          <h3>Expérience</h3>
+          <p>Animations, transitions, transformations : chaque parcours utilisateur est pensé pour retenir l'attention.</p>
+        </article>
+        <article class="category-card">
+          <span class="category-card__icon"><i class="fa-solid fa-users"></i></span>
+          <h3>Communauté</h3>
+          <p>Développeurs et utilisateurs s'abonnent, likent, commentent et partagent en temps réel.</p>
+        </article>
+        <article class="category-card">
+          <span class="category-card__icon"><i class="fa-solid fa-shield-heart"></i></span>
+          <h3>Confiance</h3>
+          <p>Des conditions d'utilisation claires, des simulations de paiement sans risque et des données protégées.</p>
+        </article>
+      </section>
+
+      <section class="app-description" data-animate>
+        <h2>Contact & support</h2>
+        <p>Besoin d'une démo personnalisée, d'un accompagnement UI/UX ou d'une activation marketing ? Nos équipes sont disponibles pour imaginer l'expérience qui vous ressemble.</p>
+        <ul>
+          <li><i class="fa-solid fa-phone"></i> Téléphone : <strong>+237694103585</strong></li>
+          <li><i class="fa-solid fa-envelope"></i> Email : <a href="mailto:hello@asyzys.com">hello@asyzys.com</a></li>
+          <li><i class="fa-solid fa-location-dot"></i> Bureaux hybrides : Douala · Dakar · Paris</li>
+        </ul>
+        <div class="cta-banner">
+          <div>
+            <h3>Planifiez une session découverte</h3>
+            <p>Nous analysons vos besoins produit et UI pour orchestrer un lancement mémorable.</p>
+          </div>
+          <a class="btn btn--secondary" href="auth.html"><i class="fa-solid fa-calendar-check"></i> Réserver un créneau</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="images/logo.png" alt="Asyzys" width="60">
+          <p>Asyzys.com · Carrefour stratégique entre développeurs et communautés fidèles.</p>
+        </div>
+        <div>
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="apps.html">Applications</a></li>
+            <li><a href="auth.html">Connexion & inscription</a></li>
+            <li><a href="terms.html">Conditions d'utilisation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Ressources</h4>
+          <ul>
+            <li><a href="apps.html?category=education">Éducation</a></li>
+            <li><a href="apps.html?category=jeux">Jeux</a></li>
+            <li><a href="apps.html?category=musique">Musique</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Partagez Asyzys</h4>
+          <button class="btn btn--ghost" data-copy-link>
+            <i class="fa-solid fa-copy"></i> Copier cette page
+          </button>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-current-year></span> Asyzys.com</span>
+        <span>Design aligné avec notre logo et nos valeurs.</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
